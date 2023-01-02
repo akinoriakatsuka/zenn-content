@@ -77,7 +77,7 @@ using namespace std;
 
 int main()
 {
-  int list = {1,2,3,4,5};
+  int list[] = {1,2,3,4,5};
 
   cout << min_element(list, list + 5) << endl; // 最小の要素のポインタ
   cout << *min_element(list, list + 5) << endl; // 1
