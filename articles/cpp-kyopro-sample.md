@@ -87,3 +87,20 @@ int main()
   return 0;
 }
 ```
+
+## 二進数
+
+```cpp:Main.cpp
+#include <iostream>
+#include <bitset>
+using namespace std;
+
+int main()
+{
+  int number = 65535;
+  bitset<32> bs(number);
+  cout << bs << endl; // 00000000000000001111111111111111
+
+  return 0;
+}
+```
