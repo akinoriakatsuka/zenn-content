@@ -69,7 +69,26 @@ int main()
 ```
 
 # 処理
-## 最大値・最小値
+
+## 配列
+
+### ソート
+
+```cpp:Main.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n = 5;
+  int list[] = {1, 3, 5, 2, 4};
+
+  sort(list, list + n); // 1,2,3,4,5
+  sort(list, list + 5, greater<int>()); // 5,4,3,2,1
+}
+```
+
+### 最大値・最小値
 
 ```cpp:Main.cpp
 #include <iostream>
@@ -88,7 +107,9 @@ int main()
 }
 ```
 
-## 二進数
+## 整数
+
+### 二進数
 
 ```cpp:Main.cpp
 #include <iostream>
