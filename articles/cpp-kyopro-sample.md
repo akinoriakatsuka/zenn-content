@@ -127,6 +127,10 @@ int main()
 }
 ```
 
+:::message alert
+`v(n)`として長さを設定しないと、`cin >> v[i];`で値を割り当てる際にSegmentation faultとなる
+:::
+
 ### ソート
 
 ```cpp
