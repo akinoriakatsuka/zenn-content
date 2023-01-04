@@ -70,32 +70,6 @@ int main()
 
 # 処理
 
-## ベクトル
-
-### 長さNのベクトルを作る
-
-```cpp:Main.cpp
-#include <iostream>
-#include <vector>
-using namespace std;
-
-int main()
-{
-  int n = 5;
-  cin >> n;
-  vector<int> v(n);
-  for (int i = 0; i < n; i++)
-    cin >> v[i];
-  return 0;
-}
-```
-
-### ソート
-
-```cpp:Main.cpp
-   sort(v.begin(),v.end());
-```
-
 ## 配列
 
 ### ソート
@@ -132,6 +106,41 @@ int main()
   return 0;
 }
 ```
+
+## ベクトル
+
+### 長さNのベクトルを作る
+
+```cpp:Main.cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+  int n = 5;
+  cin >> n;
+  vector<int> v(n);
+  for (int i = 0; i < n; i++)
+    cin >> v[i];
+  return 0;
+}
+```
+
+### ソート
+
+```cpp
+   sort(v.begin(),v.end());
+```
+
+### 重複要素を削除する
+
+```cpp
+   v.erase(unique(v.begin(), v.end()),v.end());
+```
+
+参考:https://qiita.com/ysk24ok/items/30ae72f4f1060b088588
+
 
 ## 整数
 
