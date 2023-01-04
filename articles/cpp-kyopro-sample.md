@@ -70,6 +70,32 @@ int main()
 
 # 処理
 
+## ベクトル
+
+### 長さNのベクトルを作る
+
+```cpp:Main.cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+  int n = 5;
+  cin >> n;
+  vector<int> v(n);
+  for (int i = 0; i < n; i++)
+    cin >> v[i];
+  return 0;
+}
+```
+
+### ソート
+
+```cpp:Main.cpp
+   sort(v.begin(),v.end());
+```
+
 ## 配列
 
 ### ソート
@@ -81,10 +107,10 @@ using namespace std;
 int main()
 {
   int n = 5;
-  int list[] = {1, 3, 5, 2, 4};
+  int array[] = {1, 3, 5, 2, 4};
 
-  sort(list, list + n); // 1,2,3,4,5
-  sort(list, list + 5, greater<int>()); // 5,4,3,2,1
+  sort(array, array + n); // 1,2,3,4,5
+  sort(array, array + 5, greater<int>()); // 5,4,3,2,1
 }
 ```
 
@@ -96,12 +122,12 @@ using namespace std;
 
 int main()
 {
-  int list[] = {1,2,3,4,5};
+  int array[] = {1,2,3,4,5};
 
-  cout << min_element(list, list + 5) << endl; // 最小の要素のポインタ
-  cout << *min_element(list, list + 5) << endl; // 1
-  cout << max_element(list, list + 5) << endl; //  最大の要素のポインタ
-  cout << *max_element(list, list + 5) << endl; // 5
+  cout << min_element(array, array + 5) << endl; // 最小の要素のポインタ
+  cout << *min_element(array, array + 5) << endl; // 1
+  cout << max_element(array, array + 5) << endl; //  最大の要素のポインタ
+  cout << *max_element(array, array + 5) << endl; // 5
 
   return 0;
 }
