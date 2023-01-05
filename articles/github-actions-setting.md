@@ -6,15 +6,17 @@ topics: ["github"]
 published: true
 ---
 
+# 概要
+
+GitHub Actions のサンプルコードをまとめます。
+
 # GitHub Actionsの設定
 
-## クイックスタート
+## とりあえず試す
 
 https://docs.github.com/en/actions/quickstart
 
-
-`.github/workflows/`以下にYAMLを追加する。
-YAMLファイルに以下のように設定
+リポジトリを作成して、`.github/workflows/`以下にYAMLを追加する。
 
 ```yaml:.github/workflows/actions.yml
 name: GitHub Actions Demo
@@ -36,9 +38,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 ```
 
-https://github.com/<ユーザー名>/<リポジトリ名>/actionsにアクセスすると結果を閲覧できます。
-
-https://github.com/akinoriakatsuka/github-actions-sample
+https://github.com/<ユーザー名>/<リポジトリ名>/actions にアクセスすると結果を閲覧できます。
 
 ## 並列処理
 jobsは基本的に並列で処理されます。一つひとつのjobのstepは連続的に処理されます。
@@ -49,7 +49,7 @@ job同士で順番を設定したい場合以下のように設定します。
 needsにjobの名前またはjobの名前の配列を指定して、順番を設定します。
 ![](/images/github-actions-setting/image1.png)
 
-```yaml:.github/workflows/actions.yml
+```yaml:.github/workflows/actions_parallel.yml
 name: Parallel
 on: [push]
 jobs:
@@ -79,4 +79,6 @@ jobs:
       - run: echo "end"
 ```
 
+## 使用量の把握
 
+https://github.com/settings/billing の Usage this month から見られます。
