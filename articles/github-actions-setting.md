@@ -50,7 +50,7 @@ needsにjobの名前またはjobの名前の配列を指定して、順番を設
 ![](/images/github-actions-setting/image1.png)
 
 ```yaml:.github/workflows/actions.yml
-name: Pallarel
+name: Parallel
 on: [push]
 jobs:
   setup:
