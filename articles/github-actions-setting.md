@@ -36,4 +36,47 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 ```
 
+https://github.com/<ユーザー名>/<リポジトリ名>/actionsにアクセスすると結果を閲覧できます。
+
 https://github.com/akinoriakatsuka/github-actions-sample
+
+## 並列処理
+jobsは基本的に並列で処理されます。一つひとつのjobのstepは連続的に処理されます。
+job同士で順番を設定したい場合以下のように設定します。
+
+### 並列処理の順番の設定
+
+needsにjobの名前またはjobの名前の配列を指定して、順番を設定します。
+![](/images/github-actions-setting/2023-01-06 1.20.04.png)
+
+```yaml:.github/workflows/actions.yml
+name: Pallarel
+on: [push]
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "setup"
+  job1:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "job1"
+  job2:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "job2"
+  job3:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "job3"
+  end:
+    needs: ["job1", "job2", "job3"]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "end"
+```
+
+
