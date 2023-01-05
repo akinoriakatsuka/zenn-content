@@ -47,7 +47,7 @@ job同士で順番を設定したい場合以下のように設定します。
 ### 並列処理の順番の設定
 
 needsにjobの名前またはjobの名前の配列を指定して、順番を設定します。
-![](/images/github-actions-setting/2023-01-06 1.20.04.png)
+![](/images/github-actions-setting/image1.png)
 
 ```yaml:.github/workflows/actions.yml
 name: Pallarel
