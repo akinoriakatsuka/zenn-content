@@ -40,6 +40,10 @@ jobs:
 
 https://github.com/<ユーザー名>/<リポジトリ名>/actions にアクセスすると結果を閲覧できます。
 
+## 使用量の把握
+
+https://github.com/settings/billing の Usage this month から見られます。
+
 ## 並列処理
 jobsは基本的に並列で処理されます。一つひとつのjobのstepは連続的に処理されます。
 job同士で順番を設定したい場合以下のように設定します。
@@ -78,7 +82,3 @@ jobs:
     steps:
       - run: echo "end"
 ```
-
-## 使用量の把握
-
-https://github.com/settings/billing の Usage this month から見られます。
