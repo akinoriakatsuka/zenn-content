@@ -145,6 +145,13 @@ int main()
 
 参考:https://qiita.com/ysk24ok/items/30ae72f4f1060b088588
 
+### リサイズ
+
+長さが確定した時に、領域を確保する時に用いる。
+
+```cpp
+   v.resize(n)
+```
 
 ## 整数
 
