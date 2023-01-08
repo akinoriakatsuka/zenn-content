@@ -171,3 +171,67 @@ int main()
   return 0;
 }
 ```
+
+## 文字列
+
+```cpp:Main.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  string s = "Some String";
+  return 0;
+}
+```
+
+### 反転させる
+
+```cpp:Main.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  string s = "Some String";
+  reverse(s.begin(),s.end());
+  cout << s << endl; // gnirtS emoS
+
+  return 0;
+}
+```
+
+### 前方一致しているか判別する
+```cpp:Main.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  string s1 = "abcde";
+  string s2 = "abc";
+  string s3 = "cde";
+
+  cout << equal(s2.begin(),s2.end(),s1.begin()) << endl; // 1
+  cout << equal(s3.begin(),s3.end(),s1.begin()) << endl; // 0
+
+  return 0;
+}
+```
+
+### 文字列の一部を削除する
+```cpp:Main.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  string s = "abcde";
+  s.erase(0,3);
+
+  cout << s << endl; // de
+  
+  return 0;
+}
+```
+
