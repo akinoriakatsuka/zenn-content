@@ -147,7 +147,7 @@ int main()
 
 ### リサイズ
 
-長さが確定した時に、領域を確保する時に用いる。
+領域を確保する時に用いる。
 
 ```cpp
    v.resize(n)
@@ -230,7 +230,7 @@ int main()
   s.erase(0,3);
 
   cout << s << endl; // de
-  
+
   return 0;
 }
 ```
