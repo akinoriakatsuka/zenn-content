@@ -172,7 +172,7 @@ int main()
 }
 ```
 
-## 文字列
+## 文字・文字列
 
 ```cpp:Main.cpp
 #include <iostream>
@@ -235,3 +235,19 @@ int main()
 }
 ```
 
+### 文字コードを取得する
+
+`+`を前につければ良い
+
+```cpp:Main.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  string a = "A";
+  cout << +a[0] << endl; // 65
+  cout << +a[0] - 64 << endl; // 1
+  return 0;
+}
+```
