@@ -251,3 +251,27 @@ int main()
   return 0;
 }
 ```
+
+### アルファベットのn番目を取得する
+
+```cpp:Main.cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int uppercase_to_int(char c)
+{
+  return +c - 64;
+}
+
+int downcase_to_int(char c)
+{
+  return +c - 96;
+}
+
+int main()
+{
+  cout << uppercase_to_int("A"[0])  << endl;
+  cout << downcase_to_int("b"[0])  << endl;
+  return 0;
+}
+```
