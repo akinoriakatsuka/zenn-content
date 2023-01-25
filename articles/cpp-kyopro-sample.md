@@ -252,7 +252,7 @@ int main()
 }
 ```
 
-### アルファベットのn番目を取得する
+### アルファベットが何番目かをintで取得する
 
 ```cpp:Main.cpp
 #include <bits/stdc++.h>
