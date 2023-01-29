@@ -3,7 +3,7 @@ title: "Google Chromeで歌詞サイトのソースを表示する"
 emoji: "📜"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["chrome","chromium"]
-published: false
+published: true
 ---
 
 # 概要
