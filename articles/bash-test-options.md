@@ -93,6 +93,6 @@ test 1 -gt 3; echo $? # 1
 
 ```bash
 test -t 0; echo $? # 0
-
+```
 
 
