@@ -35,6 +35,8 @@ ${string}は空文字列ではないのでnot emptyが表示される。
 ## 補足
 [ ] の記法は`test`コマンドの書き換えです。
 
+testコマンドについては[こちら](https://zenn.dev/aki_artisan/articles/bash-test-options)の記事で解説しています。
+
 ```
 if [ -n "hoge" ] ; then
 ```
