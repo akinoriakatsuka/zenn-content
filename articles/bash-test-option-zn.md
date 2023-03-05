@@ -27,7 +27,7 @@ fi
 ```bash
 string="hoge"
 if [ -n "$string" ] ; then
-  echo "not empty";
+  echo "not empty"
 fi
 ```
 "$string"は空文字列ではないのでnot emptyが表示される。
