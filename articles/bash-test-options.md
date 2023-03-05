@@ -20,14 +20,14 @@ test -n "hoge"; echo $?
 if文でよく使われ、以下のように使われます。
 ```bash
 VAR="hoge"
-if test -n ${VAR}; then
+if test -n "$VAR"; then
   echo "VAR is not empty"
 fi
 ```
 
 `[]`を使って以下のように書くこともできます。（こちらの方がよくみかける）
 ```bash
-if [ -n ${VAR} ]; then
+if [ -n "$VAR" ]; then
 ```
 
 # オプションの一覧

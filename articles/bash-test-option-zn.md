@@ -18,19 +18,19 @@ published: true
 
 ```bash
 string=""
-if [ -z ${string} ] ; then
+if [ -z "$string" ] ; then
   echo "empty";
 fi
 ```
-${string}は空文字列なので、emptyが表示される。
+"$string"は空文字列なので、emptyが表示される。
 
 ```bash
 string="hoge"
-if [ -n ${string} ] ; then
+if [ -n "$string" ] ; then
   echo "not empty";
 fi
 ```
-${string}は空文字列ではないのでnot emptyが表示される。
+"$string"は空文字列ではないのでnot emptyが表示される。
 
 ## 補足
 [ ] の記法は`test`コマンドの書き換えです。
