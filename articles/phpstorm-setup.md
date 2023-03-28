@@ -2,14 +2,14 @@
 title: "PhpStormを使い始めるためにやったこと（Mac）"
 emoji: "🌪️"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["php","PhpStrom","JetBrains"]
+topics: ["php","PhpStorm","JetBrains"]
 published: true
 ---
 
 これまでVSCodeしか使っていなかったのですが、PHPerKaigi2023で色々な方がおすすめしていたので、入門することにしました。
 「これも設定しておくと良いよ！」というものがありましたらコメントでぜひ教えてください。
 
-# PhpStromのインストール
+# PhpStormのインストール
 
 公式サイトからダウンロード
 https://www.jetbrains.com/ja-jp/phpstorm/
