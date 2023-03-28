@@ -74,7 +74,7 @@ https://fortee.jp/phperkaigi-2023/proposal/6125c4e2-528c-4b6b-b383-ffc8bfeec29a
 
 https://fortee.jp/phperkaigi-2023/proposal/d3084a8f-89b5-48d6-8a81-59c460b3b3e0
 
-運用を止めずにPHPをバージョンアップできる手法が紹介されていて、
+運用を止めずにPHPをバージョンアップできる手法が紹介されていて、とても参考になりました。
 実際の移行もロードバランサーを使って、安全に行なっているのも勉強になりました。
 
 ## CodeCrafters にチャレンジして PHP で Redis を作ってみる
