@@ -20,11 +20,29 @@ https://www.jetbrains.com/ja-jp/phpstorm/
 
 # インタプリタの設定
 
+そのままだとPHPを実行するためのインタプリタがないので、インストールしたバイナリファイルのパスを指定する。
+
+今回はHomebrewでインストールしてみます
+
 ```
-brew install php
+$ brew install php
 ```
 
-2023/3/28現在、PHP 8.2.4がインストールされる
+2023/3/28現在、PHP 8.2.4がインストールされる。
+
+```
+$ php --version
+PHP 8.2.4 (cli) (built: Mar 16 2023 16:46:52) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.4, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.4, Copyright (c), by Zend Technologies
+$ which php
+/usr/local/bin/php
+$ readlink /usr/local/bin/php
+../Cellar/php/8.2.4/bin/php
+```
+
+`which php`と`readlink /usr/local/bin/php`はインストールされている場所の確認です。場所がうまく見つからない場合は試してみてください。
 
 ![](/images/phpstorm-setup/setting.png)
 
