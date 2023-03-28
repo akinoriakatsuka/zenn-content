@@ -14,15 +14,14 @@ published: true
 公式サイトからダウンロード
 https://www.jetbrains.com/ja-jp/phpstorm/
 
-無料お試し期間があります。
-
+少し手が出しづらいお値段ですが、無料お試し期間があります。
 ![](/images/phpstorm-setup/price.png)
 
 # インタプリタの設定
 
 そのままだとPHPを実行するためのインタプリタがないので、インストールしたバイナリファイルのパスを指定する。
 
-今回はHomebrewでインストールしてみます
+今回はHomebrewでインストールしてみます。
 
 ```
 $ brew install php
@@ -46,7 +45,7 @@ $ readlink /usr/local/bin/php
 
 ![](/images/phpstorm-setup/setting.png)
 
-/usr/local/Cellar/というディレクトリにbrewで入れたphpが置かれているので、これを選択して設定
+/usr/local/Cellar/というディレクトリにbrewで入れたphpが置かれているので、これを選択して設定。
 
 ![](/images/phpstorm-setup/cli_interpreters.png)
 
