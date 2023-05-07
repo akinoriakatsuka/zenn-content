@@ -8,3 +8,6 @@ chapters:
   - install
   - createdb
   - createtable
+  - select
+  - insert
+  - where
