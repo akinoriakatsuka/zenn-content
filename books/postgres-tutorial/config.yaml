@@ -11,3 +11,7 @@ chapters:
   - select
   - insert
   - where
+  - delete
+  - update
+  - orderby
+  - groupby
