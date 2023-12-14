@@ -10,17 +10,24 @@ published: false
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 ## Overview
-This specification extends, expands and replaces PSR-2, the coding style guide and requires adherence to PSR-1, the basic coding standard.
+<!-- This specification extends, expands and replaces PSR-2, the coding style guide and requires adherence to PSR-1, the basic coding standard. -->
+この仕様は、PSR-2（コーディングスタイルガイド）を延長、拡張および置き換え、PSR-1（基本的なコーディングスタンダード）への遵守を必要とします。
 
-Like PSR-2, the intent of this specification is to reduce cognitive friction when scanning code from different authors. It does so by enumerating a shared set of rules and expectations about how to format PHP code. This PSR seeks to provide a set way that coding style tools can implement, projects can declare adherence to and developers can easily relate to between different projects. When various authors collaborate across multiple projects, it helps to have one set of guidelines to be used among all those projects. Thus, the benefit of this guide is not in the rules themselves but the sharing of those rules.
+<!-- Like PSR-2, the intent of this specification is to reduce cognitive friction when scanning code from different authors. It does so by enumerating a shared set of rules and expectations about how to format PHP code. This PSR seeks to provide a set way that coding style tools can implement, projects can declare adherence to and developers can easily relate to between different projects. When various authors collaborate across multiple projects, it helps to have one set of guidelines to be used among all those projects. Thus, the benefit of this guide is not in the rules themselves but the sharing of those rules. -->
 
-PSR-2 was accepted in 2012 and since then a number of changes have been made to PHP which has implications for coding style guidelines. Whilst PSR-2 is very comprehensive of PHP functionality that existed at the time of writing, new functionality is very open to interpretation. This PSR, therefore, seeks to clarify the content of PSR-2 in a more modern context with new functionality available, and make the errata to PSR-2 binding.
+PSR-2のように、この仕様の関心は、異なる作者のコードを読むときの認知摩擦を減らすことです。これは、PHPコードのフォーマット方法に関する共有されたルールと期待を列挙することによって行われます。このPSRは、コーディングスタイルツールが実装できる一連の方法、プロジェクトが遵守を宣言できる一連の方法、および開発者が異なるプロジェクト間で簡単に関連付けられる一連の方法を提供しようとします。さまざまな作者が複数のプロジェクトで協力するとき、それはそれら全てのプロジェクトの間で使われる一連のガイドラインを持つことを助けます。したがって、このガイドの利点は、ルール自体ではなく、それらのルールを共有することにあります。
+
+<!-- PSR-2 was accepted in 2012 and since then a number of changes have been made to PHP which has implications for coding style guidelines. Whilst PSR-2 is very comprehensive of PHP functionality that existed at the time of writing, new functionality is very open to interpretation. This PSR, therefore, seeks to clarify the content of PSR-2 in a more modern context with new functionality available, and make the errata to PSR-2 binding. -->
+PSR-2は2012年に承認され、その後、コーディングスタイルガイドに影響を与えるPHPの変更がいくつか行われています。一方PSR-2は、執筆時点で存在していたPHP機能に非常に包括的ですが、新しい機能は解釈の余地が非常に大きいです。したがって、このPSRは、PSR-2の内容を新しい機能が利用可能になったより現代的なコンテキストで明確にし、PSR-2の拘束に訂正を生じさせることを目的としています。
 
 ### Previous language versions
-Throughout this document, any instructions MAY be ignored if they do not exist in versions of PHP supported by your project.
+<!-- Throughout this document, any instructions MAY be ignored if they do not exist in versions of PHP supported by your project. -->
+
+このドキュメントでは、あなたのプロジェクトでサポートされているPHPのバージョンに存在しない場合、いかなる指示を無視してもかまいません。
 
 ### Example
-This example encompasses some of the rules below as a quick overview:
+<!-- This example encompasses some of the rules below as a quick overview: -->
+この例は、短い概要として以下のルールの一部を網羅しています。
 
 ```php
 <?php
