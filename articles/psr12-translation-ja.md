@@ -65,39 +65,54 @@ class Foo extends Bar implements FooInterface
 
 ## 2. General
 ### 2.1 Basic Coding Standard
-Code MUST follow all rules outlined in PSR-1.
+<!-- Code MUST follow all rules outlined in PSR-1. -->
+コードは、PSR-1で概説されているすべてのルールに従わねばなりません。
 
-The term 'StudlyCaps' in PSR-1 MUST be interpreted as PascalCase where the first letter of each word is capitalized including the very first letter.
+<!-- The term 'StudlyCaps' in PSR-1 MUST be interpreted as PascalCase where the first letter of each word is capitalized including the very first letter. -->
+StudlyCapsという用語は、PSR-1では、各単語の最初の文字が大文字である、最初の文字を含むPascalCaseとして解釈されなければなりません。
 
 ### 2.2 Files
-All PHP files MUST use the Unix LF (linefeed) line ending only.
+<!-- All PHP files MUST use the Unix LF (linefeed) line ending only. -->
+すべてのPHPファイルは、Unix LF（ラインフィード）の行末を使用しなければなりません。
 
-All PHP files MUST end with a non-blank line, terminated with a single LF.
+<!-- All PHP files MUST end with a non-blank line, terminated with a single LF. -->
+全てのPHPファイルは、単一のLFで終了する、空行でない行で終了しなければなりません。
 
-The closing ?> tag MUST be omitted from files containing only PHP.
+<!-- The closing ?> tag MUST be omitted from files containing only PHP. -->
+PHPのみを含むファイルからは、`?>`タグを省略しなければなりません。
 
 ### 2.3 Lines
-There MUST NOT be a hard limit on line length.
+<!-- There MUST NOT be a hard limit on line length. -->
+行の長さには厳格な制限を設けてはなりません。
 
-The soft limit on line length MUST be 120 characters.
+<!-- The soft limit on line length MUST be 120 characters. -->
+行の長さの緩い制限は120文字でなければなりません。
 
-Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD be split into multiple subsequent lines of no more than 80 characters each.
+<!-- Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD be split into multiple subsequent lines of no more than 80 characters each. -->
+行は80文字を超えないべきで、それ以上の行は80文字を超えない複数の行に分割されるべきです。
 
-There MUST NOT be trailing whitespace at the end of lines.
+<!-- There MUST NOT be trailing whitespace at the end of lines. -->
+行の末尾の空白はあってはなりません。
 
-Blank lines MAY be added to improve readability and to indicate related blocks of code except where explicitly forbidden.
+<!-- Blank lines MAY be added to improve readability and to indicate related blocks of code except where explicitly forbidden. -->
+空白の行は、明示的に禁止されていない限り、可読性を向上させ、関連するコードブロックを示すために追加することができます。
 
-There MUST NOT be more than one statement per line.
+<!-- There MUST NOT be more than one statement per line. -->
+一行に一つより多くの文を含んではなりません。
 
 ### 2.4 Indenting
-Code MUST use an indent of 4 spaces for each indent level, and MUST NOT use tabs for indenting.
+<!-- Code MUST use an indent of 4 spaces for each indent level, and MUST NOT use tabs for indenting. -->
+1つのインデントレベルにつき4つのスペースを使用しなければならず、インデントにタブを使用してはなりません。
 
 ### 2.5 Keywords and Types
-All PHP reserved keywords and types [1][2] MUST be in lower case.
+<!-- All PHP reserved keywords and types [1][2] MUST be in lower case. -->
+全てのPHPの予約されたキーワードと型は小文字でなければなりません。
 
-Any new types and keywords added to future PHP versions MUST be in lower case.
+<!-- Any new types and keywords added to future PHP versions MUST be in lower case. -->
+将来のPHPバージョンに追加れる、あらゆる新しい型とキーワードは、ローワーケースでなければなりません。
 
-Short form of type keywords MUST be used i.e. `bool` instead of `boolean`, `int` instead of `integer` etc.
+<!-- Short form of type keywords MUST be used i.e. `bool` instead of `boolean`, `int` instead of `integer` etc. -->
+型キーワードの短い形式を使用しなければなりません。例えば、`boolean`の代わりに`bool`、`integer`の代わりに`int`などを使用しなければなりません。
 
 ## 3. Declare Statements, Namespace, and Import Statements
 The header of a PHP file may consist of a number of different blocks. If present, each of the blocks below MUST be separated by a single blank line, and MUST NOT contain a blank line. Each block MUST be in the order listed below, although blocks that are not relevant may be omitted.
