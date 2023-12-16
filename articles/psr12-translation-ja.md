@@ -115,23 +115,37 @@ PHPのみを含むファイルからは、`?>`タグを省略しなければな�
 型キーワードの短い形式を使用しなければなりません。例えば、`boolean`の代わりに`bool`、`integer`の代わりに`int`などを使用しなければなりません。
 
 ## 3. Declare Statements, Namespace, and Import Statements
-The header of a PHP file may consist of a number of different blocks. If present, each of the blocks below MUST be separated by a single blank line, and MUST NOT contain a blank line. Each block MUST be in the order listed below, although blocks that are not relevant may be omitted.
+<!-- The header of a PHP file may consist of a number of different blocks. If present, each of the blocks below MUST be separated by a single blank line, and MUST NOT contain a blank line. Each block MUST be in the order listed below, although blocks that are not relevant may be omitted. -->
+PHPファイルのヘッダーは、複数の異なるブロックで構成される場合があります。その場合、以下の各ブロックは、単一の空行で区切られなければならず、空行を含んではなりません。各ブロックは、以下にリストされている順序でなければなりませんが、関連しないブロックは省略することができます。
 
-Opening `<?php` tag.
-File-level docblock.
-One or more declare statements.
-The namespace declaration of the file.
-One or more class-based `use` import statements.
-One or more function-based `use` import statements.
-One or more constant-based `use` import statements.
-The remainder of the code in the file.
-When a file contains a mix of HTML and PHP, any of the above sections may still be used. If so, they MUST be present at the top of the file, even if the remainder of the code consists of a closing PHP tag and then a mixture of HTML and PHP.
+<!-- - Opening `<?php` tag.
+- File-level docblock.
+- One or more declare statements.
+- The namespace declaration of the file.
+- One or more class-based `use` import statements.
+- One or more function-based `use` import statements.
+- One or more constant-based `use` import statements.
+- The remainder of the code in the file. -->
+- `<?php`タグ
+- ファイルレベルのdocblock
+- 1つ以上のdeclare文
+- ファイルの名前空間宣言
+- 1つ以上のクラスベースの`use`インポート文
+- 1つ以上の関数ベースの`use`インポート文
+- 1つ以上の定数ベースの`use`インポート文
+- ファイル内の残りのコード
 
-When the opening `<?php` tag is on the first line of the file, it MUST be on its own line with no other statements unless it is a file containing markup outside of PHP opening and closing tags.
+<!-- When a file contains a mix of HTML and PHP, any of the above sections may still be used. If so, they MUST be present at the top of the file, even if the remainder of the code consists of a closing PHP tag and then a mixture of HTML and PHP. -->
+ファイルがHTMLとPHPの混合を含む場合、上記のいずれのセクションをも使用することができます。その場合、たとえコードの残りがPHPの終了タグとHTMLとPHPの混合であっても、それらはファイルの先頭に存在しなければなりません。
 
-Import statements MUST never begin with a leading backslash as they must always be fully qualified.
+<!-- When the opening `<?php` tag is on the first line of the file, it MUST be on its own line with no other statements unless it is a file containing markup outside of PHP opening and closing tags. -->
+`<?php`タグがファイルの最初の行にある場合、それがPHPの開始と終了タグの外にマークアップを含むファイルでない限り、それは他の文がない行にある必要があります。
 
-The following example illustrates a complete list of all blocks:
+<!-- Import statements MUST never begin with a leading backslash as they must always be fully qualified. -->
+インポート文は、常に完全修飾名である必要があるため、バックスラッシュで始まってはなりません。
+
+<!-- The following example illustrates a complete list of all blocks: -->
+下記の例は、すべてのブロックの完全なリストを示しています。
 
 ```php
 <?php
@@ -163,7 +177,8 @@ class FooBar
 }
 ```
 
-Compound namespaces with a depth of more than two MUST NOT be used. Therefore the following is the maximum compounding depth allowed:
+<!-- Compound namespaces with a depth of more than two MUST NOT be used. Therefore the following is the maximum compounding depth allowed: -->
+深さが2を超える合成名前空間は使用してはなりません。したがって、以下が許可される最大の合成深度です。
 
 ```php
 <?php
@@ -176,7 +191,8 @@ use Vendor\Package\SomeNamespace\{
 };
 ```
 
-And the following would not be allowed:
+<!-- And the following would not be allowed: -->
+そして、以下は許可されません。
 
 ```php
 
@@ -189,7 +205,8 @@ use Vendor\Package\SomeNamespace\{
 };
 ```
 
-When wishing to declare strict types in files containing markup outside PHP opening and closing tags, the declaration MUST be on the first line of the file and include an opening PHP tag, the strict types declaration and closing tag.
+<!-- When wishing to declare strict types in files containing markup outside PHP opening and closing tags, the declaration MUST be on the first line of the file and include an opening PHP tag, the strict types declaration and closing tag. -->
+PHPの開始タグと終了タグの外にマークアップを含むファイルでstrict typesを宣言したい場合、宣言はファイルの最初の行にあり、開始PHPタグ、strict types宣言、終了タグが含まれていなければなりません。
 
 For example:
 
@@ -205,9 +222,11 @@ For example:
 </html>
 ```
 
-Declare statements MUST contain no spaces and MUST be exactly `declare(strict_types=1)` (with an optional semi-colon terminator).
+<!-- Declare statements MUST contain no spaces and MUST be exactly `declare(strict_types=1)` (with an optional semi-colon terminator). -->
+宣言文はスペースを含まず、正確に `declare(strict_types=1)` でなければなりません。（オプションのセミコロン終端子を含む）
 
-Block declare statements are allowed and MUST be formatted as below. Note position of braces and spacing:
+<!-- Block declare statements are allowed and MUST be formatted as below. Note position of braces and spacing: -->
+ブロック宣言文は許可され、以下のようにフォーマットしなければなりません。括弧とスペースの位置に注意してください。
 
 ```php
 
