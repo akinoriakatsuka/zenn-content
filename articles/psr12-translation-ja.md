@@ -3,13 +3,16 @@ title: "PSR-12 拡張コーディングスタイル（日本語訳）"
 emoji: "🐘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["php"]
-published: false
+published: true
 ---
 
-# PSR-12: Extended Coding Style
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+# PSR-12 拡張コーディングスタイル
+<!-- The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119. -->
+"MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY"および"OPTIONAL"というキーワードは、このドキュメントでは、RFC 2119で説明されているように解釈されます。
 
-## Overview
+<!-- ## Overview -->
+## 概要
+
 <!-- This specification extends, expands and replaces PSR-2, the coding style guide and requires adherence to PSR-1, the basic coding standard. -->
 この仕様は、PSR-2（コーディングスタイルガイド）を延長、拡張および置き換え、PSR-1（基本的なコーディングスタンダード）への遵守を必要とします。
 
@@ -20,12 +23,14 @@ PSR-2のように、この仕様の関心は、異なる作者のコードを読
 <!-- PSR-2 was accepted in 2012 and since then a number of changes have been made to PHP which has implications for coding style guidelines. Whilst PSR-2 is very comprehensive of PHP functionality that existed at the time of writing, new functionality is very open to interpretation. This PSR, therefore, seeks to clarify the content of PSR-2 in a more modern context with new functionality available, and make the errata to PSR-2 binding. -->
 PSR-2は2012年に承認され、その後、コーディングスタイルガイドに影響を与えるPHPの変更がいくつか行われています。一方PSR-2は、執筆時点で存在していたPHP機能に非常に包括的ですが、新しい機能は解釈の余地が非常に大きいです。したがって、このPSRは、PSR-2の内容を新しい機能が利用可能になったより現代的なコンテキストで明確にし、PSR-2の拘束に訂正を生じさせることを目的としています。
 
-### Previous language versions
-<!-- Throughout this document, any instructions MAY be ignored if they do not exist in versions of PHP supported by your project. -->
+<!-- ### Previous language versions -->
+### 以前の言語バージョン
 
+<!-- Throughout this document, any instructions MAY be ignored if they do not exist in versions of PHP supported by your project. -->
 このドキュメントでは、あなたのプロジェクトでサポートされているPHPのバージョンに存在しない場合、いかなる指示を無視してもかまいません。
 
-### Example
+<!-- ### Example -->
+### 例
 <!-- This example encompasses some of the rules below as a quick overview: -->
 この例は、短い概要として以下のルールの一部を網羅しています。
 
@@ -63,15 +68,18 @@ class Foo extends Bar implements FooInterface
 }
 ```
 
-## 2. General
-### 2.1 Basic Coding Standard
+<!-- ## 2. General -->
+## 2. 一般
+<!-- ### 2.1 Basic Coding Standard -->
+## 2.1 基本的なコーディングスタンダード
 <!-- Code MUST follow all rules outlined in PSR-1. -->
 コードは、PSR-1で概説されているすべてのルールに従わねばなりません。
 
 <!-- The term 'StudlyCaps' in PSR-1 MUST be interpreted as PascalCase where the first letter of each word is capitalized including the very first letter. -->
 StudlyCapsという用語は、PSR-1では、各単語の最初の文字が大文字である、最初の文字を含むPascalCaseとして解釈されなければなりません。
 
-### 2.2 Files
+<!-- ### 2.2 Files -->
+### 2.2 ファイル
 <!-- All PHP files MUST use the Unix LF (linefeed) line ending only. -->
 すべてのPHPファイルは、Unix LF（ラインフィード）の行末を使用しなければなりません。
 
@@ -81,7 +89,8 @@ StudlyCapsという用語は、PSR-1では、各単語の最初の文字が大�
 <!-- The closing ?> tag MUST be omitted from files containing only PHP. -->
 PHPのみを含むファイルからは、`?>`タグを省略しなければなりません。
 
-### 2.3 Lines
+<!-- ### 2.3 Lines -->
+### 2.3 行
 <!-- There MUST NOT be a hard limit on line length. -->
 行の長さには厳格な制限を設けてはなりません。
 
@@ -100,11 +109,13 @@ PHPのみを含むファイルからは、`?>`タグを省略しなければな�
 <!-- There MUST NOT be more than one statement per line. -->
 一行に一つより多くの文を含んではなりません。
 
-### 2.4 Indenting
+<!-- ### 2.4 Indenting -->
+### 2.4 インデント
 <!-- Code MUST use an indent of 4 spaces for each indent level, and MUST NOT use tabs for indenting. -->
 1つのインデントレベルにつき4つのスペースを使用しなければならず、インデントにタブを使用してはなりません。
 
-### 2.5 Keywords and Types
+<!-- ### 2.5 Keywords and Types -->
+### 2.5 キーワードと型
 <!-- All PHP reserved keywords and types [1][2] MUST be in lower case. -->
 全てのPHPの予約されたキーワードと型は小文字でなければなりません。
 
@@ -114,7 +125,8 @@ PHPのみを含むファイルからは、`?>`タグを省略しなければな�
 <!-- Short form of type keywords MUST be used i.e. `bool` instead of `boolean`, `int` instead of `integer` etc. -->
 型キーワードの短い形式を使用しなければなりません。例えば、`boolean`の代わりに`bool`、`integer`の代わりに`int`などを使用しなければなりません。
 
-## 3. Declare Statements, Namespace, and Import Statements
+<!-- ## 3. Declare Statements, Namespace, and Import Statements -->
+## 3. 宣言文、名前空間、およびインポート文
 <!-- The header of a PHP file may consist of a number of different blocks. If present, each of the blocks below MUST be separated by a single blank line, and MUST NOT contain a blank line. Each block MUST be in the order listed below, although blocks that are not relevant may be omitted. -->
 PHPファイルのヘッダーは、複数の異なるブロックで構成される場合があります。その場合、以下の各ブロックは、単一の空行で区切られなければならず、空行を含んではなりません。各ブロックは、以下にリストされている順序でなければなりませんが、関連しないブロックは省略することができます。
 
@@ -235,25 +247,34 @@ declare(ticks=1) {
 }
 ```
 
-## 4. Classes, Properties, and Methods
-The term "class" refers to all classes, interfaces, and traits.
+<!-- ## 4. Classes, Properties, and Methods -->
+## 4. クラス、プロパティ、およびメソッド
+<!-- The term "class" refers to all classes, interfaces, and traits. -->
+"class" という用語は、すべてのクラス、インターフェース、トレイトを指します。
 
-Any closing brace MUST NOT be followed by any comment or statement on the same line.
+<!-- Any closing brace MUST NOT be followed by any comment or statement on the same line. -->
+あらゆる閉じ括弧の後には、同じ行にコメントや文が続いてはなりません。
 
-When instantiating a new class, parentheses MUST always be present even when there are no arguments passed to the constructor.
+<!-- When instantiating a new class, parentheses MUST always be present even when there are no arguments passed to the constructor. -->
+新しいクラスをインスタンス化する時、引数がコンストラクタに渡されない場合でも、常に括弧を使用しなければなりません。
 
 ```php
 new Foo();
 ```
 
-### 4.1 Extends and Implements
-The `extends` and `implements` keywords MUST be declared on the same line as the class name.
+<!-- ### 4.1 Extends and Implements -->
+### 4.1 拡張と実装
+<!-- The `extends` and `implements` keywords MUST be declared on the same line as the class name. -->
+`extends` と `implements` キーワードは、クラス名と同じ行に宣言しなければなりません。
 
-The opening brace for the class MUST go on its own line; the closing brace for the class MUST go on the next line after the body.
+<!-- The opening brace for the class MUST go on its own line; the closing brace for the class MUST go on the next line after the body. -->
+クラスの開始括弧は、独自の行に配置しなければなりません。クラスの終了括弧は、本体の次の行に配置しなければなりません。
 
-Opening braces MUST be on their own line and MUST NOT be preceded or followed by a blank line.
+<!-- Opening braces MUST be on their own line and MUST NOT be preceded or followed by a blank line. -->
+開始括弧は、独自の行に配置しなければなりません。また、前後に空行を配置してはなりません。
 
-Closing braces MUST be on their own line and MUST NOT be preceded by a blank line.
+<!-- Closing braces MUST be on their own line and MUST NOT be preceded by a blank line. -->
+終了括弧は、独自の行に配置しなければなりません。また、前に空行を配置してはなりません。
 
 ```php
 <?php
@@ -270,7 +291,8 @@ class ClassName extends ParentClass implements \ArrayAccess, \Countable
 }
 ```
 
-Lists of `implements` and, in the case of interfaces, `extends` MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one interface per line.
+<!-- Lists of `implements` and, in the case of interfaces, `extends` MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one interface per line. -->
+`implements` のリストと、インターフェースの場合は `extends` のリストは、各行が1回インデントされた複数の行に分割することができます。その場合、リスト内の最初の項目は次の行に配置しなければならず、1行に1つのインターフェースしかないようにしなければなりません。
 
 ```php
 <?php
@@ -290,8 +312,10 @@ class ClassName extends ParentClass implements
 }
 ```
 
-### 4.2 Using traits
-The use keyword used inside the classes to implement traits MUST be declared on the next line after the opening brace.
+<!-- ### 4.2 Using traits -->
+### 4.2 トレイトの使用
+<!-- The use keyword used inside the classes to implement traits MUST be declared on the next line after the opening brace. -->
+クラス内で使用されるトレイトを実装するためのuseキーワードは、開始括弧の次の行に宣言しなければなりません。
 
 ```php
 <?php
@@ -306,7 +330,8 @@ class ClassName
 }
 ```
 
-Each individual trait that is imported into a class MUST be included one-per-line and each inclusion MUST have its own `use` import statement.
+<!-- Each individual trait that is imported into a class MUST be included one-per-line and each inclusion MUST have its own `use` import statement. -->
+クラスにインポートされる各個別のトレイトは、1行に1つずつ含まれていなければならず、各インクルードには独自の`use`インポート文が必要です。
 
 ```php
 <?php
@@ -325,7 +350,8 @@ class ClassName
 }
 ```
 
-When the class has nothing after the use import statement, the class closing brace MUST be on the next line after the use import statement.
+<!-- When the class has nothing after the use import statement, the class closing brace MUST be on the next line after the use import statement. -->
+クラスがuseインポート文の後に何も持たない場合、クラスの終了括弧はuseインポート文の次の行に配置しなければなりません。
 
 ```php
 <?php
@@ -340,7 +366,8 @@ class ClassName
 }
 ```
 
-Otherwise, it MUST have a blank line after the use import statement.
+<!-- Otherwise, it MUST have a blank line after the use import statement. -->
+そうでない場合は、useインポート文の後に空行を置かなければなりません。
 
 ```php
 <?php
@@ -357,7 +384,8 @@ class ClassName
 }
 ```
 
-When using the `insteadof` and `as` operators they must be used as follows taking note of indentation, spacing, and new lines.
+<!-- When using the `insteadof` and `as` operators they must be used as follows taking note of indentation, spacing, and new lines. -->
+`insteadof` と `as` 演算子を使用する場合は、インデント、スペース、および改行に注意して、以下のように使用しなければなりません。
 
 ```php
 <?php
@@ -375,20 +403,28 @@ class Talker
 }
 ```
 
-### 4.3 Properties and Constants
-Visibility MUST be declared on all properties.
+<!-- ### 4.3 Properties and Constants -->
+### 4.3 プロパティと定数
+<!-- Visibility MUST be declared on all properties. -->
+可視性はすべてのプロパティについて宣言しなければなりません。
 
-Visibility MUST be declared on all constants if your project PHP minimum version supports constant visibilities (PHP 7.1 or later).
+<!-- Visibility MUST be declared on all constants if your project PHP minimum version supports constant visibilities (PHP 7.1 or later). -->
+可視性は、プロジェクトのPHPの最小バージョンが定数の可視性をサポートしている場合（PHP 7.1以降）、すべての定数について宣言しなければなりません。
 
-The `var` keyword MUST NOT be used to declare a property.
+<!-- The `var` keyword MUST NOT be used to declare a property. -->
+`var` キーワードを使用してプロパティを宣言してはなりません。
 
-There MUST NOT be more than one property declared per statement.
+<!-- There MUST NOT be more than one property declared per statement. -->
+1つの文に複数のプロパティを宣言してはなりません。
 
-Property names MUST NOT be prefixed with a single underscore to indicate protected or private visibility. That is, an underscore prefix explicitly has no meaning.
+<!-- Property names MUST NOT be prefixed with a single underscore to indicate protected or private visibility. That is, an underscore prefix explicitly has no meaning. -->
+protectedまたはprivateの可視性を示すために、プロパティ名をアンダースコアで始めてはなりません。つまり、アンダースコアの接頭辞には明示的には意味がありません。
 
-There MUST be a space between type declaration and property name.
+<!-- There MUST be a space between type declaration and property name. -->
+型宣言とプロパティ名の間にはスペースを置かなければなりません。
 
-A property declaration looks like the following:
+<!-- A property declaration looks like the following: -->
+プロパティ宣言は以下のようになります。
 
 ```php
 <?php
@@ -402,14 +438,19 @@ class ClassName
 }
 ```
 
-### 4.4 Methods and Functions
-Visibility MUST be declared on all methods.
+<!-- ### 4.4 Methods and Functions -->
+### 4.4 メソッドと関数
+<!-- Visibility MUST be declared on all methods. -->
+可視性はすべてのメソッドについて宣言しなければなりません。
 
-Method names MUST NOT be prefixed with a single underscore to indicate protected or private visibility. That is, an underscore prefix explicitly has no meaning.
+<!-- Method names MUST NOT be prefixed with a single underscore to indicate protected or private visibility. That is, an underscore prefix explicitly has no meaning. -->
+protectedまたはprivateの可視性を示すために、メソッド名をアンダースコアで始めてはなりません。つまり、アンダースコアの接頭辞には明示的には意味がありません。
 
-Method and function names MUST NOT be declared with space after the method name. The opening brace MUST go on its own line, and the closing brace MUST go on the next line following the body. There MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis.
+<!-- Method and function names MUST NOT be declared with space after the method name. The opening brace MUST go on its own line, and the closing brace MUST go on the next line following the body. There MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. -->
+メソッド名や関数名は、その後にスペースを置いて宣言してはなりません。開始波括弧は独自の行に配置しなければならず、終了波括弧は本体の次の行に配置しなければなりません。開始丸括弧の後にスペースを置いてはならず、終了丸括弧の前にスペースを置いてはなりません。
 
-A method declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:
+<!-- A method declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces: -->
+メソッド宣言は以下のようになります。括弧、カンマ、スペース、波括弧の配置に注意してください。
 
 ```php
 <?php
@@ -425,8 +466,8 @@ class ClassName
 }
 ```
 
-A function declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:
-
+<!-- A function declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces: -->
+関数宣言は以下のようになります。括弧、カンマ、スペース、波括弧の配置に注意してください。
 
 ```php
 <?php
@@ -437,10 +478,13 @@ function fooBarBaz($arg1, &$arg2, $arg3 = [])
 }
 ```
 
-### 4.5 Method and Function Arguments
-In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.
+<!-- ### 4.5 Method and Function Arguments -->
+### 4.5 メソッドと関数の引数
+<!-- In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma. -->
+引数リストでは、カンマの前にスペースを置いてはならず、カンマの後にスペースを置かなければなりません。
 
-Method and function arguments with default values MUST go at the end of the argument list.
+<!-- Method and function arguments with default values MUST go at the end of the argument list. -->
+メソッドと関数のデフォルト値のある引数は、引数リストの最後に配置しなければなりません。
 
 ```php
 <?php
@@ -456,9 +500,11 @@ class ClassName
 }
 ```
 
-Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.
+<!-- Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line. -->
+引数リストは、各行が1回インデントされた複数の行に分割することができます。その場合、リスト内の最初の項目は次の行に配置しなければならず、1行に1つの引数しかないようにしなければなりません。
 
-When the argument list is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them.
+<!-- When the argument list is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them. -->
+引数リストが複数の行に分割される場合、終了丸括弧と開始波括弧は、それらの間に1つのスペースを置いて、独自の行に一緒に配置しなければなりません。
 
 ```php
 <?php
@@ -477,7 +523,8 @@ class ClassName
 }
 ```
 
-When you have a return type declaration present, there MUST be one space after the colon followed by the type declaration. The colon and declaration MUST be on the same line as the argument list closing parenthesis with no spaces between the two characters.
+<!-- When you have a return type declaration present, there MUST be one space after the colon followed by the type declaration. The colon and declaration MUST be on the same line as the argument list closing parenthesis with no spaces between the two characters. -->
+戻り値の型宣言がある場合、コロンの後には、型宣言が続くスペースが1つ必要です。コロンと宣言は、引数リストの終了丸括弧と同じ行に配置しなければなりません。2つの文字の間にスペースを置いてはなりません。
 
 ```php
 <?php
@@ -503,7 +550,8 @@ class ReturnTypeVariations
 }
 ```
 
-In nullable type declarations, there MUST NOT be a space between the question mark and the type.
+<!-- In nullable type declarations, there MUST NOT be a space between the question mark and the type. -->
+null許容型宣言では、疑問符と型の間にスペースを置いてはなりません。
 
 ```php
 <?php
@@ -521,9 +569,11 @@ class ReturnTypeVariations
 }
 ```
 
-When using the reference operator & before an argument, there MUST NOT be a space after it, like in the previous example.
+<!-- When using the reference operator & before an argument, there MUST NOT be a space after it, like in the previous example. -->
+引数の前に参照演算子&を使用する場合、前の例のように、その後にスペースを置いてはなりません。
 
-There MUST NOT be a space between the variadic three dot operator and the argument name:
+<!-- There MUST NOT be a space between the variadic three dot operator and the argument name: -->
+可変長引数の3点演算子と引数名の間にスペースを置いてはなりません。
 
 ```php
 public function process(string $algorithm, ...$parts)
@@ -532,7 +582,8 @@ public function process(string $algorithm, ...$parts)
 }
 ```
 
-When combining both the reference operator and the variadic three dot operator, there MUST NOT be any space between the two of them:
+<!-- When combining both the reference operator and the variadic three dot operator, there MUST NOT be any space between the two of them: -->
+参照演算子と可変長引数の3点演算子を組み合わせる場合、2つの間にスペースを置いてはなりません。
 
 ```php
 public function process(string $algorithm, &...$parts)
@@ -541,10 +592,13 @@ public function process(string $algorithm, &...$parts)
 }
 ```
 
-### 4.6 `abstract`, `final`, and `static`
-When present, the abstract and final declarations MUST precede the visibility declaration.
+<!-- ### 4.6 `abstract`, `final`, and `static` -->
+### 4.6 `abstract`、`final`、および `static`
+<!-- When present, the abstract and final declarations MUST precede the visibility declaration. -->
+存在する場合、abstractとfinalの宣言は、可視性の宣言の前に配置しなければなりません。
 
-When present, the static declaration MUST come after the visibility declaration.
+<!-- When present, the static declaration MUST come after the visibility declaration. -->
+存在する場合、staticの宣言は、可視性の宣言の後に配置しなければなりません。
 
 ```php
 <?php
@@ -564,8 +618,10 @@ abstract class ClassName
 }
 ```
 
-### 4.7 Method and Function Calls
-When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis, there MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.
+<!-- ### 4.7 Method and Function Calls -->
+### 4.7 メソッドと関数の呼び出し
+<!-- When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis, there MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma. -->
+メソッドや関数を呼び出す場合、メソッドや関数名と開始丸括弧の間にスペースを置いてはなりません。開始丸括弧の後にスペースを置いてはならず、終了丸括弧の前にスペースを置いてはなりません。引数リストでは、カンマの前にスペースを置いてはならず、カンマの後にスペースを置かなければなりません。
 
 ```php
 <?php
@@ -575,7 +631,8 @@ $foo->bar($arg1);
 Foo::bar($arg2, $arg3);
 ```
 
-Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line. A single argument being split across multiple lines (as might be the case with an anonymous function or array) does not constitute splitting the argument list itself.
+<!-- Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line. A single argument being split across multiple lines (as might be the case with an anonymous function or array) does not constitute splitting the argument list itself. -->
+引数リストは、各行が1回インデントされた複数の行に分割しても構いません。その場合、リスト内の最初の項目は次の行に配置しなければならず、1行に1つの引数しかないようにしなければなりません。複数行に分割されている単一の引数（無名関数や配列の場合）は、引数リスト自体を分割するものではありません。
 
 ```php
 <?php
@@ -599,20 +656,32 @@ $app->get('/hello/{name}', function ($name) use ($app) {
 });
 ```
 
-## 5. Control Structures
-The general style rules for control structures are as follows:
+<!-- ## 5. Control Structures -->
+## 5. 制御構造
+<!-- The general style rules for control structures are as follows: -->
+制御構造の一般的なスタイルルールは以下の通りです。
 
-There MUST be one space after the control structure keyword
-There MUST NOT be a space after the opening parenthesis
-There MUST NOT be a space before the closing parenthesis
-There MUST be one space between the closing parenthesis and the opening brace
-The structure body MUST be indented once
-The body MUST be on the next line after the opening brace
-The closing brace MUST be on the next line after the body
-The body of each structure MUST be enclosed by braces. This standardizes how the structures look and reduces the likelihood of introducing errors as new lines get added to the body.
+<!-- - There MUST be one space after the control structure keyword
+- There MUST NOT be a space after the opening parenthesis
+- There MUST NOT be a space before the closing parenthesis
+- There MUST be one space between the closing parenthesis and the opening brace
+- The structure body MUST be indented once
+- The body MUST be on the next line after the opening brace
+- The closing brace MUST be on the next line after the body -->
+- 制御構造キーワードの後には1つのスペースを置かなければなりません。
+- 開始丸括弧の後にスペースを置いてはなりません。
+- 終了丸括弧の前にスペースを置いてはなりません。
+- 終了丸括弧と開始波括弧の間には1つのスペースを置かなければなりません。
+- 構造体の本体は1回インデントされなければなりません。
+- 本体は開始波括弧の次の行に配置しなければなりません。
+- 終了波括弧は本体の次の行に配置しなければなりません。
+
+<!-- The body of each structure MUST be enclosed by braces. This standardizes how the structures look and reduces the likelihood of introducing errors as new lines get added to the body. -->
+制御構造の本体は波括弧で囲まれていなければなりません。これにより、構造の見た目が標準化され、本体に新しい行が追加されたときにエラーが発生する可能性が低くなります。
 
 ### 5.1 `if`, `elseif`, `else`
-An `if` structure looks like the following. Note the placement of parentheses, spaces, and braces; and that `else` and `elseif` are on the same line as the closing brace from the earlier body.
+<!-- An `if` structure looks like the following. Note the placement of parentheses, spaces, and braces; and that `else` and `elseif` are on the same line as the closing brace from the earlier body. -->
+`if` 構造は以下のようになります。括弧、スペース、波括弧の配置に注意してください。また、`else` と `elseif` は、前の本体の終了波括弧と同じ行にあります。
 
 ```php
 <?php
@@ -626,9 +695,11 @@ if ($expr1) {
 }
 ```
 
-The keyword `elseif` SHOULD be used instead of `else if` so that all control keywords look like single words.
+<!-- The keyword `elseif` SHOULD be used instead of `else if` so that all control keywords look like single words. -->
+すべての制御キーワードが単語のように見えるようにするために、`else if` の代わりに`elseif` キーワードが使用されるべきです。
 
-Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both.
+<!-- Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both. -->
+丸括弧の中の式は、各行が1回インデントされた複数の行に分割することができます。その場合、最初の条件は次の行に配置しなければなりません。終了丸括弧と開始波括弧は、それらの間に1つのスペースを置いて、独自の行に一緒に配置しなければなりません。条件間のブール演算子は、常に行の先頭または行の末尾に配置しなければならず、両方の混合であってはなりません。
 
 ```php
 <?php
@@ -646,8 +717,9 @@ if (
 }
 ```
 
-### 5.2 switch, case
-A switch structure looks like the following. Note the placement of parentheses, spaces, and braces. The case statement MUST be indented once from switch, and the break keyword (or other terminating keywords) MUST be indented at the same level as the case body. There MUST be a comment such as // no break when fall-through is intentional in a non-empty case body.
+### 5.2 `switch`, `case`
+<!-- A `switch` structure looks like the following. Note the placement of parentheses, spaces, and braces. The `case` statement MUST be indented once from `switch`, and the `break` keyword (or other terminating keywords) MUST be indented at the same level as the `case` body. There MUST be a comment such as `// no break` when fall-through is intentional in a non-empty `case` body. -->
+`switch` 構造は以下のようになります。括弧、スペース、波括弧の配置に注意してください。`case` 文は `switch` から1回インデントされ、`break` キーワード（またはその他の終端キーワード）は `case` 本体と同じレベルにインデントされなければなりません。`case` 本体が空でないとき、意図的にフォールスルーする場合は、`// no break` のようなコメントを付けなければなりません。
 
 ```php
 <?php
@@ -670,7 +742,8 @@ switch ($expr) {
 }
 ```
 
-Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both.
+<!-- Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both. -->
+丸括弧の中の式は、各行が少なくとも1回インデントされた複数の行に分割することができます。その場合、最初の条件は次の行に配置しなければなりません。終了丸括弧と開始波括弧は、それらの間に1つのスペースを置いて、独自の行に一緒に配置しなければなりません。条件間のブール演算子は、常に行の先頭または行の末尾に配置しなければならず、両方の混合であってはなりません。
 
 ```php
 <?php
@@ -684,7 +757,8 @@ switch (
 ```
 
 ### 5.3 `while`, `do while`
-A `while` statement looks like the following. Note the placement of parentheses, spaces, and braces.
+<!-- A `while` statement looks like the following. Note the placement of parentheses, spaces, and braces. -->
+`while` 文は以下のようになります。括弧、スペース、波括弧の配置に注意してください。
 
 ```php
 <?php
@@ -694,7 +768,8 @@ while ($expr) {
 }
 ```
 
-Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both.
+<!-- Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both. -->
+丸括弧の中の式は、各行が少なくとも1回インデントされた複数の行に分割することができます。その場合、最初の条件は次の行に配置しなければなりません。終了丸括弧と開始波括弧は、それらの間に1つのスペースを置いて、独自の行に一緒に配置しなければなりません。条件間のブール演算子は、常に行の先頭または行の末尾に配置しなければならず、両方の混合であってはなりません。
 
 ```php
 <?php
@@ -707,7 +782,8 @@ while (
 }
 ```
 
-Similarly, a do while statement looks like the following. Note the placement of parentheses, spaces, and braces.
+<!-- Similarly, a do while statement looks like the following. Note the placement of parentheses, spaces, and braces. -->
+似たように、do while 文は以下のようになります。括弧、スペース、波括弧の配置に注意してください。
 
 ```php
 <?php
@@ -717,7 +793,8 @@ do {
 } while ($expr);
 ```
 
-Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both.
+<!-- Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first condition MUST be on the next line. Boolean operators between conditions MUST always be at the beginning or at the end of the line, not a mix of both. -->
+丸括弧の中の式は、各行が少なくとも1回インデントされた複数の行に分割することができます。その場合、最初の条件は次の行に配置しなければなりません。条件間のブール演算子は、常に行の先頭または行の末尾に配置しなければならず、両方の混合であってはなりません。
 
 ```php
 <?php
@@ -730,8 +807,9 @@ do {
 );
 ```
 
-### 5.4 for
-A for statement looks like the following. Note the placement of parentheses, spaces, and braces.
+### 5.4 `for`
+<!-- A `for` statement looks like the following. Note the placement of parentheses, spaces, and braces. -->
+`for` 文は以下のようになります。括弧、スペース、波括弧の配置に注意してください。
 
 ```php
 <?php
@@ -741,7 +819,8 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
-Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first expression MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them.
+<!-- Expressions in parentheses MAY be split across multiple lines, where each subsequent line is indented at least once. When doing so, the first expression MUST be on the next line. The closing parenthesis and opening brace MUST be placed together on their own line with one space between them. -->
+丸括弧の中の式は、各行が少なくとも1回インデントされた複数の行に分割することができます。その場合、最初の式は次の行に配置しなければなりません。終了丸括弧と開始波括弧は、それらの間に1つのスペースを置いて、独自の行に一緒に配置しなければなりません。
 
 ```php
 <?php
@@ -756,7 +835,8 @@ for (
 ```
 
 ### 5.5 `foreach`
-A `foreach` statement looks like the following. Note the placement of parentheses, spaces, and braces.
+<!-- A `foreach` statement looks like the following. Note the placement of parentheses, spaces, and braces. -->
+`foreach` 文は以下のようになります。括弧、スペース、波括弧の配置に注意してください。
 
 ```php
 <?php
@@ -767,7 +847,8 @@ foreach ($iterable as $key => $value) {
 ```
 
 ### 5.6 `try`, `catch`, `finally`
-A `try-catch-finally` block looks like the following. Note the placement of parentheses, spaces, and braces.
+<!-- A `try-catch-finally` block looks like the following. Note the placement of parentheses, spaces, and braces. -->
+`try-catch-finally` ブロックは以下のようになります。括弧、スペース、波括弧の配置に注意してください。
 
 ```php
 <?php
@@ -783,29 +864,38 @@ try {
 }
 ```
 
-## 6. Operators
-Style rules for operators are grouped by arity (the number of operands they take).
+<!-- ## 6. Operators -->
+## 6. 演算子
+<!-- Style rules for operators are grouped by arity (the number of operands they take). -->
+演算子のスタイルルールは、arity（そられがとるオペランドの数）によってグループ化されます。
 
-When space is permitted around an operator, multiple spaces MAY be used for readability purposes.
+<!-- When space is permitted around an operator, multiple spaces MAY be used for readability purposes. -->
+演算子の周りにスペースを許可する場合、可読性を高めるために複数のスペースを使用することができます。
 
-All operators not described here are left undefined.
+<!-- All operators not described here are left undefined. -->
+ここで説明されていないすべての演算子は未定義のままです。
 
-### 6.1. Unary operators
-The increment/decrement operators MUST NOT have any space between the operator and operand.
+<!-- ### 6.1. Unary operators -->
+### 6.1 単項演算子
+<!-- The increment/decrement operators MUST NOT have any space between the operator and operand. -->
+インクリメントまたはデクリメント演算子は、演算子とオペランドの間にスペースを置いてはなりません。
 
 ```php
 $i++;
 ++$j;
 ```
 
-Type casting operators MUST NOT have any space within the parentheses:
+<!-- Type casting operators MUST NOT have any space within the parentheses: -->
+型キャスト演算子は、丸括弧の中にスペースを置いてはなりません。
 
 ```php
 $intValue = (int) $input;
 ```
 
-### 6.2. Binary operators
-All binary arithmetic, comparison, assignment, bitwise, logical, string, and type operators MUST be preceded and followed by at least one space:
+<!-- ### 6.2. Binary operators -->
+### 6.2 二項演算子
+<!-- All binary arithmetic, comparison, assignment, bitwise, logical, string, and type operators MUST be preceded and followed by at least one space: -->
+全ての算術、比較、代入、ビット演算、論理、文字列、型の二項演算子は、前後に少なくとも1つのスペースを置かなければなりません。
 
 ```php
 if ($a === $b) {
@@ -815,33 +905,44 @@ if ($a === $b) {
 }
 ```
 
-### 6.3. Ternary operators
-The conditional operator, also known simply as the ternary operator, MUST be preceded and followed by at least one space around both the ? and : characters:
+<!-- ### 6.3. Ternary operators -->
+### 6.3 三項演算子
+<!-- The conditional operator, also known simply as the ternary operator, MUST be preceded and followed by at least one space around both the ? and : characters: -->
+条件演算子（三項演算子とも呼ばれる）は、? と : の両方の文字の前後に少なくとも1つのスペースを置かなければなりません。
 
 ```php
 $variable = $foo ? 'foo' : 'bar';
 ```
 
-When the middle operand of the conditional operator is omitted, the operator MUST follow the same style rules as other binary comparison operators:
+<!-- When the middle operand of the conditional operator is omitted, the operator MUST follow the same style rules as other binary comparison operators: -->
+条件演算子の中間オペランドが省略されている場合、演算子は他の二項比較演算子と同じスタイルルールに従わなければなりません。
 
 ```php
 $variable = $foo ?: 'bar';
 ```
 
-## 7. Closures
-Closures MUST be declared with a space after the `function` keyword, and a space before and after the `use` keyword.
+<!-- ## 7. Closures -->
+## 7. クロージャー
+<!-- Closures MUST be declared with a space after the `function` keyword, and a space before and after the `use` keyword. -->
+クロージャーは、`function` キーワードの後にスペースを置いて宣言し、`use` キーワードの前後にスペースを置かなければなりません。
 
-The opening brace MUST go on the same line, and the closing brace MUST go on the next line following the body.
+<!-- The opening brace MUST go on the same line, and the closing brace MUST go on the next line following the body. -->
+開始波括弧は同じ行に配置しなければならず、終了波括弧は本体の次の行に配置しなければなりません。
 
-There MUST NOT be a space after the opening parenthesis of the argument list or variable list, and there MUST NOT be a space before the closing parenthesis of the argument list or variable list.
+<!-- There MUST NOT be a space after the opening parenthesis of the argument list or variable list, and there MUST NOT be a space before the closing parenthesis of the argument list or variable list. -->
+開始丸括弧の後にスペースを置いてはならず、終了丸括弧の前にスペースを置いてはなりません。
 
-In the argument list and variable list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.
+<!-- In the argument list and variable list, there MUST NOT be a space before each comma, and there MUST be one space after each comma. -->
+引数リストと変数リストでは、カンマの前にスペースを置いてはならず、カンマの後にスペースを置かなければなりません。
 
-Closure arguments with default values MUST go at the end of the argument list.
+<!-- Closure arguments with default values MUST go at the end of the argument list. -->
+クロージャーのデフォルト値を持つ引数は、引数リストの最後に配置しなければなりません。
 
-If a return type is present, it MUST follow the same rules as with normal functions and methods; if the `use` keyword is present, the colon MUST follow the `use` list closing parentheses with no spaces between the two characters.
+<!-- If a return type is present, it MUST follow the same rules as with normal functions and methods; if the `use` keyword is present, the colon MUST follow the `use` list closing parentheses with no spaces between the two characters. -->
+戻り値の方が存在する場合、通常の関数やメソッドと同じルールに従わなければなりません。`use` キーワードが存在する場合、コロンは `use` リストの終了丸括弧の後に、2つの文字の間にスペースを置かずに配置しなければなりません。
 
-A closure declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:
+<!-- A closure declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces: -->
+クロージャーの宣言は以下のようになります。括弧、カンマ、スペース、波括弧の配置に注意してください。
 
 ```php
 <?php
@@ -859,11 +960,14 @@ $closureWithArgsVarsAndReturn = function ($arg1, $arg2) use ($var1, $var2): bool
 };
 ```
 
-Argument lists and variable lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument or variable per line.
+<!-- Argument lists and variable lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument or variable per line. -->
+引数リストと変数リストは、各行が1回インデントされた複数の行に分割することができます。その場合、リスト内の最初の項目は次の行に配置しなければならず、1行に1つの引数または変数しかないようにしなければなりません。
 
-When the ending list (whether of arguments or variables) is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them.
+<!-- When the ending list (whether of arguments or variables) is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them. -->
+終了リスト（引数または変数）が複数の行に分割される場合、終了丸括弧と開始波括弧は、それらの間に1つのスペースを置いて、独自の行に一緒に配置しなければなりません。
 
-The following are examples of closures with and without argument lists and variable lists split across multiple lines.
+<!-- The following are examples of closures with and without argument lists and variable lists split across multiple lines. -->
+以下は、引数リストと変数リストが複数の行に分割されたクロージャーの例です。
 
 ```php
 <?php
@@ -913,7 +1017,8 @@ $shortArgs_longVars = function ($arg) use (
 };
 ```
 
-Note that the formatting rules also apply when the closure is used directly in a function or method call as an argument.
+<!-- Note that the formatting rules also apply when the closure is used directly in a function or method call as an argument. -->
+クロージャーが引数として関数やメソッドの呼び出しに直接使用される場合でも、フォーマットルールが適用されることに注意してください。
 
 ```php
 <?php
@@ -927,8 +1032,10 @@ $foo->bar(
 );
 ```
 
-## 8. Anonymous Classes
-Anonymous Classes MUST follow the same guidelines and principles as closures in the above section.
+<!-- ## 8. Anonymous Classes -->
+## 8. 無名クラス
+<!-- Anonymous Classes MUST follow the same guidelines and principles as closures in the above section. -->
+無名クラスは、上記のセクションにあるクロージャーと同じガイドラインと原則に従わなければなりません。
 
 ```php
 <?php
@@ -936,7 +1043,8 @@ Anonymous Classes MUST follow the same guidelines and principles as closures in 
 $instance = new class {};
 ```
 
-The opening brace MAY be on the same line as the class keyword so long as the list of implements interfaces does not wrap. If the list of interfaces wraps, the brace MUST be placed on the line immediately following the last interface.
+<!-- The opening brace MAY be on the same line as the class keyword so long as the list of implements interfaces does not wrap. If the list of interfaces wraps, the brace MUST be placed on the line immediately following the last interface. -->
+開始波括弧は、implementsインターフェースのリストが折り返されない限り、classキーワードと同じ行にあっても構いません。インターフェースのリストが折り返される場合は、波括弧は最後のインターフェースの直後の行に配置しなければなりません。
 
 ```php
 <?php
