@@ -130,14 +130,7 @@ PHPのみを含むファイルからは、`?>`タグを省略しなければな�
 <!-- The header of a PHP file may consist of a number of different blocks. If present, each of the blocks below MUST be separated by a single blank line, and MUST NOT contain a blank line. Each block MUST be in the order listed below, although blocks that are not relevant may be omitted. -->
 PHPファイルのヘッダーは、複数の異なるブロックで構成される場合があります。その場合、以下の各ブロックは、単一の空行で区切られなければならず、空行を含んではなりません。各ブロックは、以下にリストされている順序でなければなりませんが、関連しないブロックは省略することができます。
 
-<!-- - Opening `<?php` tag.
-- File-level docblock.
-- One or more declare statements.
-- The namespace declaration of the file.
-- One or more class-based `use` import statements.
-- One or more function-based `use` import statements.
-- One or more constant-based `use` import statements.
-- The remainder of the code in the file. -->
+<!-- - Opening `<?php` tag. - File-level docblock. - One or more declare statements. - The namespace declaration of the file. - One or more class-based `use` import statements. - One or more function-based `use` import statements. - One or more constant-based `use` import statements. - The remainder of the code in the file. -->
 - `<?php`タグ
 - ファイルレベルのdocblock
 - 1つ以上のdeclare文
@@ -661,13 +654,7 @@ $app->get('/hello/{name}', function ($name) use ($app) {
 <!-- The general style rules for control structures are as follows: -->
 制御構造の一般的なスタイルルールは以下の通りです。
 
-<!-- - There MUST be one space after the control structure keyword
-- There MUST NOT be a space after the opening parenthesis
-- There MUST NOT be a space before the closing parenthesis
-- There MUST be one space between the closing parenthesis and the opening brace
-- The structure body MUST be indented once
-- The body MUST be on the next line after the opening brace
-- The closing brace MUST be on the next line after the body -->
+<!-- - There MUST be one space after the control structure keyword - There MUST NOT be a space after the opening parenthesis - There MUST NOT be a space before the closing parenthesis - There MUST be one space between the closing parenthesis and the opening brace - The structure body MUST be indented once - The body MUST be on the next line after the opening brace - The closing brace MUST be on the next line after the body -->
 - 制御構造キーワードの後には1つのスペースを置かなければなりません。
 - 開始丸括弧の後にスペースを置いてはなりません。
 - 終了丸括弧の前にスペースを置いてはなりません。
